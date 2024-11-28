@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["medm"]
+
+[project]
+name = "medm"
+version = "0.1.0"
+description = "Media manager: convert, compress and cut, and QR code"
+readme = "README.md"
+license = { text = "MIT License" }
+authors = [{ name = "Michael Iyke", email = "anexe.dev@gmail.com" }]
+# Dependencies that are required for the project
+dependencies = [
+    "moviepy>=2.1.1",
+    "pillow>=10.4.0",
+    "pydub>=0.25.1",
+    "pyzbar>=0.1.9",
+    "qrcode>=8.0",
+]
+
+[project.scripts]
+medm = "medm:main" # Maps to "from med import main; main()"
+
+# INSTALLATION ON DEV MACHINE
+# 1. Clone the repository
+# 2. Change directory to the project root
+# 3. Run `pip install build` to install build
+# 4. Run `python -m build .` to build the project
+# 5. Run `pip install dist/dist/medm-0.1.0-py3-none-any.whl` to install the project
+# 6. Run `medm --help` to see the available commands

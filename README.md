@@ -66,7 +66,7 @@ from pyzbar.pyzbar import decode
 print("All libraries are installed and working!")
 ```
 
-**If you get no errors, your environment is ready to use medm*
+*If you get no errors, your environment is ready to use **medm***
 
 ### License
 
